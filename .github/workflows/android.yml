@@ -31,9 +31,9 @@ jobs:
       run: ./gradlew test
 
     - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@v1.11
+      uses: sonarsource/sonarcloud-github-action@latest
       with:
         sonar_token: ${{ secrets.SONAR_TOKEN }}
-        projectKey: vforvelasquez
-        organization: vforvelasquez
+        projectKey: ${{ secrets.SONAR_PROJECTKEY }}
+        organization: ${{ secrets.SONAR_ORG }}
 
